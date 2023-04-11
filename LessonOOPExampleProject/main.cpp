@@ -27,9 +27,15 @@ public:
 		avg_mark = avg_mk;
 	}
 
+	Student(string nam, string surnam)
+	{
+		name = nam;
+		surname = surnam;
+	}
+
 	~Student()
 	{
-		cout << "destructor";
+		cout << " destructor ";
 	}
 
 	void clear()
@@ -49,15 +55,25 @@ public:
 		msg += ", average mark = " + to_string(avg_mark) + " )";
 		return msg;
 	}
+
+	string convert1()
+	{
+		string msg = "";
+		msg += name;
+		msg += " " + surname;
+		return msg;
+	}
 };
 
 int main()
 {
 	Student st;
 	Student st1("Danya", "Yaroshenko", 14, 10);
+	Student st2("Tema", "Zabolodsky");
 
 	cout << st.convert() << endl;
 	cout << st1.convert() << endl;
+	cout << st2.convert1() << endl;
 
 
 
