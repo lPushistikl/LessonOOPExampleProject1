@@ -8,6 +8,23 @@ public:
 	int age;
 	float avg_mark;
 
+	Student()
+	{
+		name = "no name";
+		surname = "no surname";
+		age = 15;
+		avg_mark = 4;
+	}
+
+	~Student()
+	{
+		name = "no name";
+		surname = "no surname";
+		age = 15;
+		avg_mark = 4;
+		cout << "destructor";
+	}
+
 	void clear()
 	{
 		name = "no name";
