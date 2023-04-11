@@ -39,6 +39,16 @@ public:
 		age = 0;
 		avg_mark = 0;
 	}
+
+	string convert()
+	{
+		string msg = "";
+		msg += name;
+		msg += " " + surname;
+		msg += " ( age = " + to_string(age);
+		msg += ", average mark = " + to_string(avg_mark) + " )";
+		return msg;
+	}
 };
 
 int main()
@@ -46,10 +56,8 @@ int main()
 	Student st;
 	Student st1("Danya", "Yaroshenko", 14, 10);
 
-	cout << st.surname << endl;
-	cout << st.name << endl;
-	cout << st.age << endl;
-	cout << st.avg_mark << endl;
+	cout << st.convert() << endl;
+	cout << st1.convert() << endl;
 
 
 
