@@ -7,6 +7,14 @@ public:
 	string surname;
 	int age;
 	float avg_mark;
+
+	void clear()
+	{
+		name = "no name";
+		surname = "no surname";
+		age = 0;
+		avg_mark = 0;
+	}
 };
 
 int main()
@@ -17,6 +25,8 @@ int main()
 	cout << st.name << endl;
 	cout << st.age << endl;
 	cout << st.avg_mark << endl;
+
+
 
 	return 0;
 }
