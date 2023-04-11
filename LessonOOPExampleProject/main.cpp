@@ -8,6 +8,8 @@ public:
 	int age;
 	float avg_mark;
 
+
+	//default constructor
 	Student()
 	{
 		name = "no name";
@@ -16,12 +18,17 @@ public:
 		avg_mark = 4;
 	}
 
+	// constructor with arguments
+	Student(string nm, string surnm, int a, float avg_mk)
+	{
+		name = nm;
+		surname = surnm;
+		age = a;
+		avg_mark = avg_mk;
+	}
+
 	~Student()
 	{
-		name = "no name";
-		surname = "no surname";
-		age = 15;
-		avg_mark = 4;
 		cout << "destructor";
 	}
 
@@ -37,6 +44,7 @@ public:
 int main()
 {
 	Student st;
+	Student st1("Danya", "Yaroshenko", 14, 10);
 
 	cout << st.surname << endl;
 	cout << st.name << endl;
